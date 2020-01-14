@@ -18,7 +18,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 # Introduction
 
-Here is a test code chunk. CONTROL + OPTION + I adds a code chunk on Mac. On Windows, it's COMMAND + ALT + I.
+Here is a test code chunk. We can add this with the drop-down menu, but you can also use hot keys. This is CONTROL + OPTION + I adds a code chunk on Mac. And on Windows, it's COMMAND + ALT + I.
 
 
 ```{r usethis-package}
