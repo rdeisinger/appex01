@@ -121,7 +121,8 @@ five zip codes considered. Add `x` and `y` labels; add a title by inserting
 ```{r full-plot, fig.width=9}
 ggplot(data = flint_focus, aes(x = factor(zip), y = lead)) +
   geom_boxplot(aes(fill = factor(draw))) +
-  labs(x = "--------", y = "--------", fill = "Flushing time") +
+  labs(x = "--------", y = "--------", fill = "Flushing time", 
+       title = "Lead Contamination by Zip Code") +
   scale_fill_discrete(breaks = c("first", "second", "third"),
                       labels = c("0 (sec)", "45 (sec)", "120 (sec)")) +
   coord_flip() +
