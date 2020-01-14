@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 Here is a test code chunk. CONTROL + OPTION + I adds a code chunk on Mac. On Windows, it's COMMAND + ALT + I.
 
 
-```{r}
+```{r usethis-package}
 library(usethis)
 use_git_config(user.name = "Bob Eisinger", user.email = "robert.eisinger@duke.edu")
 ```
