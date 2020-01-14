@@ -1,13 +1,15 @@
 ---
 title: "Flint Water Crisis"
 author: "Bob"
-date: ""
+date: "1-14-2018"
 output: 
   html_document:
     toc: true
     number_sections: false
     toc_float: true
     df_print: paged
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -17,12 +19,19 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
 
 # Introduction
 
+Here is a test code chunk. CONTROL + OPTION + I adds a code chunk on Mac. On Windows, it's COMMAND + ALT + I.
+
+
+
+
+
 The data set consists of 271 homes sampled with three water 
 lead contaminant values at designated time points. The lead content is in 
 parts per billion (ppb). Additionally, some location data is given 
 about each home.
 
 To get started, read in the `flint.csv` file using function `read_csv()`.
+
 
 ```{r packages}
 library(tidyverse)
@@ -88,9 +97,10 @@ for zip code 48503 at the first draw. What should you put in for
 
 ```{r}
 flint %>% 
-  # filter(zip == 48503, draw == "-----") %>% 
+  filter(zip == 48503, draw == "first") %>% 
   summarise(mean_pb = mean(lead),
-            median_pb = median(lead))
+            median_pb = median(lead),
+            count_pb = n())
 ```
 
 ## Visualizations
