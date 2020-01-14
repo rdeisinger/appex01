@@ -13,8 +13,7 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
-                      comment = NA)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
 ```
 
 # Introduction
@@ -22,7 +21,10 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
 Here is a test code chunk. CONTROL + OPTION + I adds a code chunk on Mac. On Windows, it's COMMAND + ALT + I.
 
 
-
+```{r}
+library(usethis)
+use_git_config(user.name = "Bob Eisinger", user.email = "robert.eisinger@duke.edu")
+```
 
 
 The data set consists of 271 homes sampled with three water 
@@ -135,8 +137,8 @@ the corresponding plot.
 ```{r zoom plot, fig.width=9}
 ggplot(data = flint_focus, aes(x = factor(zip), y = lead)) +
   geom_boxplot(aes(fill = factor(draw))) + 
-  labs(x = "--------", y = "--------", fill = "Flushing time",
-       subtitle = "--------") +
+  labs(x = "Zip Code", y = "Lead Contamination (ppb)", fill = "Flushing time",
+       subtitle = "Lead Contamination in Flint, Michigan") +
   scale_fill_discrete(breaks = c("first", "second", "third"),
                       labels = c("0 (sec)", "45 (sec)", "120 (sec)")) +
   coord_flip(ylim = c(0, 50)) +
