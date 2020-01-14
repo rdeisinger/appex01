@@ -1,6 +1,6 @@
 ---
 title: "Flint Water Crisis"
-author: ""
+author: "Bob"
 date: ""
 output: 
   html_document:
