@@ -147,6 +147,17 @@ ggplot(data = flint_focus, aes(x = factor(zip), y = lead)) +
 
 What is the difference between the two plots?
 
+Here's another fun plot.
+
+
+```{r}
+head(flint)
+ggplot(data = flint %>% 
+         filter(zip %in% 48503:48507, lead < 100), aes(x = factor(zip), y = lead)) + 
+  geom_boxplot(aes(fill = draw)) + coord_flip()
+```
+
+
 # References
 
 1. Langkjaer-Bain, R. (2017), The murky tale of Flint's deceptive water data. 
